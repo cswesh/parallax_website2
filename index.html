@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Parallax website 2</title>
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Jungle</a>
+    
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Destination</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</header>
+<section>
+    <h2 id="text"><span>It's time for a new</span><br>Adventure</h2>
+    <img src="images/bird1.png" alt="" id="bird1">
+    <img src="images/bird2.png" alt="" id="bird2">
+    <img src="images/forest.png" alt="" id="forest">
+    <a href="#" id="btn">Explore</a>
+    <img src="images/rocks.png" alt="" id="rocks">
+    <img src="images/water.png" alt="" id="water">
+</section>
+<div class="sec">
+    <h2>Parallax Website</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis dignissimos beatae quasi amet doloremque commodi praesentium, suscipit ut corporis magnam quod. Commodi earum aliquam tempore nisi placeat? Officiis nemo error asperiores accusamus natus nostrum labore voluptas dolor ipsam, mollitia quos dolorum magnam, atque at sunt ut, neque quam rerum quas? Quae, ducimus eaque voluptatem sed suscipit eum mollitia enim impedit cum modi excepturi, officiis aliquid sapiente odio, porro assumenda sequi aperiam. Earum provident, assumenda suscipit sint quis laborum molestias labore ullam magni possimus ducimus nulla odio. Cupiditate voluptates, voluptas delectus molestias nesciunt quia in, ea iure ex neque tempora alias.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, magni eum. Architecto id accusamus similique laudantium dolorem vero in aspernatur enim fugit minima, harum reprehenderit asperiores eveniet odit veritatis! Eligendi, repudiandae ipsa praesentium cumque explicabo adipisci molestias, amet, fuga aliquid voluptatibus nulla illum error earum facilis asperiores illo unde voluptates libero velit ratione? Necessitatibus, corporis, vero et sequi amet corrupti atque pariatur quod suscipit est dolorem iusto? Tempora consectetur dolorum dignissimos iure, a, recusandae voluptas accusantium placeat quaerat repellat totam enim sint, sit itaque rem repellendus quia sequi mollitia aperiam impedit? Dolorum, ipsum nisi maxime ex nihil dolore ad autem!<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed nostrum, doloremque iure molestiae cumque corporis veniam vitae ducimus corrupti ipsa consectetur quas libero saepe. Pariatur ipsa voluptas beatae maxime nesciunt illo ipsam est eos doloribus quis soluta numquam vel officiis sed dolor temporibus fugit, voluptatum amet fuga modi exercitationem debitis quibusdam. Veritatis, cum consectetur, incidunt sint perferendis enim ipsa laborum eligendi facere minima blanditiis culpa eaque error tempore in itaque amet deleniti quas quibusdam asperiores quod minus pariatur. Voluptatibus adipisci architecto officia accusantium, assumenda fugiat? Suscipit minus numquam officia odit dolor similique sequi harum, optio, fuga amet animi in itaque.<br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur excepturi non cupiditate dignissimos accusamus eum. Quis, molestiae accusantium ab ipsam obcaecati placeat asperiores cum unde, maxime velit illo minus a. Incidunt, harum repellat eos quia iusto ducimus, quam velit dignissimos vero totam sint! Temporibus velit expedita minima earum ullam nam deleniti, vero, maiores dolores ducimus similique? Quae quod, voluptas sit minus beatae placeat aliquid consectetur commodi assumenda doloribus, veniam nesciunt? Placeat, sequi atque. Inventore doloribus recusandae laboriosam. Laboriosam facere blanditiis sunt quam totam, ea dolorem soluta. Illo inventore incidunt, exercitationem assumenda possimus aspernatur, ullam est modi ab quidem sequi ipsa!</p>
+</div>
+
+<script>
+    let text = document.getElementById('text');
+    let bird1 = document.getElementById('bird1');
+    let bird2= document.getElementById('bird2');
+    let btn = document.getElementById('btn');
+    let rocks = document.getElementById('rocks');
+    let water = document.getElementById('water');
+    let forest = document.getElementById('forest');
+    let header = document.getElementById('header');
+
+    window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+
+        text.style.top = 50 + value * -0.5 + '%';
+        bird1.style.top = value * -1.5 + 'px';
+        bird1.style.left = value * 2 + 'px';
+        bird2.style.top = value * -1.5 + 'px';
+        bird2.style.left = value * -5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        rocks.style.top = value * -0.12 + 'px';
+        forest.style.top = value * 0.25 + 'px';
+        header.style.top = value * -0.5 + 'px';
+    })
+</script>
+</body>
+</html> 
